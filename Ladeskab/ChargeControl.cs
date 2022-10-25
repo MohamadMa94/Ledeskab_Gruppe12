@@ -20,6 +20,21 @@ namespace ImpLadeskab
             _USBCharger.CurrentValueEvent += HandleCurrentValueChanged;
         }
 
+        public bool Connected
+        {
+            get { return _USBCharger.Connected; } private set { }
+        }
+
+        public void StartCharge()
+        {
+
+        }
+
+        public void StopCharge()
+        {
+
+        }
+
         public void HandleCurrentValueChanged(object sender, CurrentEventArgs e)
         {
             ControlCurrent = e.Current;
