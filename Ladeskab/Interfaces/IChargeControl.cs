@@ -9,9 +9,9 @@ namespace ImpLadeskab.Interfaces
     public interface IChargeControl
     {
         public bool Connected { get; }
-        public void startCharge();
+        public void StartCharge();
 
-        public void stopCharge();
+        public void StopCharge();
 
     }
 }
