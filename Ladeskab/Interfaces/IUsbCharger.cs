@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ImpLadeskab.Interfaces
+namespace Ladeskab.Interfaces
 {
     public class CurrentEventArgs : EventArgs
     {

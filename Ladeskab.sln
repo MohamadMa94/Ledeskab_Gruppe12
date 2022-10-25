@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ladeskab", "Ladeskab\Ladeskab.csproj", "{837D9690-124D-4114-AC75-E3970D0C857B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ladeskab.Test.Unit", "Ladeskab.Test.Unit\Ladeskab.Test.Unit.csproj", "{4FA29498-B549-4BAF-9FD0-0F5099F7F507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ladeskab.Test.Unit", "Ladeskab.Test.Unit\Ladeskab.Test.Unit.csproj", "{4FA29498-B549-4BAF-9FD0-0F5099F7F507}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppLadeskab", "AppLadeskab\AppLadeskab.csproj", "{FDB6B46A-6BD6-4DCF-8CB7-2F2428A79578}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4FA29498-B549-4BAF-9FD0-0F5099F7F507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FA29498-B549-4BAF-9FD0-0F5099F7F507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FA29498-B549-4BAF-9FD0-0F5099F7F507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB6B46A-6BD6-4DCF-8CB7-2F2428A79578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB6B46A-6BD6-4DCF-8CB7-2F2428A79578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB6B46A-6BD6-4DCF-8CB7-2F2428A79578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB6B46A-6BD6-4DCF-8CB7-2F2428A79578}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
