@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Timers;
-using ImpLadeskab.Interfaces;
+using Ladeskab.Interfaces;
 
 namespace UsbSimulator
 {
