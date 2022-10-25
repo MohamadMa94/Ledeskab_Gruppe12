@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ladeskab.Interfaces
 {
-    internal class ILogFile
+    public interface ILogFile
     {
+        void LogDoorLocked(int Id);
+
+        void LogDoorUnlocked(int Id);
+
     }
 }
