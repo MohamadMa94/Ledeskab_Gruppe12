@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ImpLadeskab.Interfaces;
+using Ladeskab.Interfaces;
 
 namespace Ladeskab
 {

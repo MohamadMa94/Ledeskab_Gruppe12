@@ -1,4 +1,4 @@
-﻿using ImpLadeskab.Interfaces;
+﻿using Ladeskab.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,16 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using UsbSimulator;
 
-namespace ImpLadeskab
+namespace Ladeskab
 {
     public class ChargeControl : IChargeControl
     {
         IUsbCharger _USBCharger;
+        IDisplay _display;
 
-        public double ControlCurrent {get; private set; }
+        public double _Current {get; private set; }
+        public bool _charging { get; private set; }
 
         public ChargeControl()
         {
+            _display = new display;
             _USBCharger = new UsbChargerSimulator();
             _USBCharger.CurrentValueEvent += HandleCurrentValueChanged;
         }
@@ -27,17 +30,23 @@ namespace ImpLadeskab
 
         public void StartCharge()
         {
-
+            _USBCharger.StartCharge();
         }
 
         public void StopCharge()
         {
-
+            _USBCharger.StopCharge();
         }
 
         public void HandleCurrentValueChanged(object sender, CurrentEventArgs e)
         {
-            ControlCurrent = e.Current;
+            if (_Current == 0.0)
+            {
+                if (_charging == false)
+                {
+
+                }
+            }
         }
 
 
