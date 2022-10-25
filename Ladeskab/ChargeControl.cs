@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UsbSimulator;
 
-namespace ImpLadeskab
+namespace ILadeskab
 {
     public class ChargeControl : IChargeControl
     {
