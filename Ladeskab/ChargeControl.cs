@@ -24,6 +24,13 @@ namespace Ladeskab
             _USBCharger.CurrentValueEvent += HandleCurrentValueChanged;
         }
 
+        public ChargeControl (IDisplay display, IUsbCharger usbCharger)
+        {
+            _display = display;
+            _USBCharger = usbCharger;
+            _USBCharger.CurrentValueEvent += HandleCurrentValueChanged;
+        }
+
         public bool Connected
         {
             get { return _USBCharger.Connected; } private set { }

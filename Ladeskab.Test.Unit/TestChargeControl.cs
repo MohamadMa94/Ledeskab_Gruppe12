@@ -16,7 +16,7 @@ namespace Ladeskab.Test.Unit
         [SetUp]
         public void Setup()
         {
-            _display = Subsitute.For<IDisplay>();
+           _display = Substitute.For<IDisplay>();
         }
 
         [Test]
