@@ -22,6 +22,7 @@ namespace Ladeskab.Test.Unit
             _tester = new ChargeControl();
         }
 
+        // Tester for at uut modtager startcharge og ikke stop charge
         [Test]
         public void Test_startCharge()
         {
@@ -29,5 +30,14 @@ namespace Ladeskab.Test.Unit
             _usbCharger.Received(1).StartCharge();
             _usbCharger.DidNotReceive().StopCharge();
         }
+
+        [Test]
+        public void Test_stopCharge()
+        {
+            _uut.StopCharge();
+            _usbCharger.Received(1).StopCharge();
+            _usbCharger.DidNotReceive().StartCharge();
+        }
+
     }
 }
