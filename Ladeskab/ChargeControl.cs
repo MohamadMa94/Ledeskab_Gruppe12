@@ -56,8 +56,8 @@ namespace Ladeskab
                 if (_charging == false)
                 {
                     _display.ConnectPhone();
-                    _charging = false;
                 }
+                _charging = false;
             }
 
             // Opladning slut
