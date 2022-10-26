@@ -16,13 +16,18 @@ namespace Ladeskab.Test.Unit
         [SetUp]
         public void Setup()
         {
-           _display = Substitute.For<IDisplay>();
+            _display = Substitute.For<IDisplay>();
+            _usbCharger = Substitute.For<IUsbCharger>();
+            _uut = new ChargeControl(_display,_usbCharger);
+            _tester = new ChargeControl();
         }
 
         [Test]
-        public void Test1()
+        public void Test_startCharge()
         {
-            Assert.Pass();
+            _uut.StartCharge();
+            _usbCharger.Received(1).StartCharge();
+            _usbCharger.DidNotReceive().StopCharge();
         }
     }
 }
