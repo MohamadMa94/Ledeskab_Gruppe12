@@ -1,8 +1,17 @@
-﻿    class Program
+﻿using Ladeskab;
+using Ladeskab.Interfaces;
+using System;
+
+
+
+
+    class Program
     {
         static void Main(string[] args)
         {
-				// Assemble your system here from all the classes
+        // Assemble your system here from all the classes
+        IWrite write = new Write();
+        ILogFile log = new LogFile(write);
 
             bool finish = false;
             do
