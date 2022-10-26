@@ -18,6 +18,7 @@ namespace Ladeskab
 
         public ChargeControl()
         {
+            _charging = false;
             _display = new Display();
             _USBCharger = new UsbChargerSimulator();
             _USBCharger.CurrentValueEvent += HandleCurrentValueChanged;
@@ -38,9 +39,9 @@ namespace Ladeskab
             _USBCharger.StopCharge();
         }
 
-        public void HandleCurrentValueChanged(object sender, CurrentEventArgs e)
+        public void HandleCurrentValueChanged(object sender, CurrentEventArgs ea)
         {
-            _Current = e.Current;
+            _Current = ea.Current;
             
             // Hvis der ikke er nogen tilslutning
             if (_Current == 0.0)
