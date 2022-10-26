@@ -25,6 +25,11 @@ namespace Ladeskab
         private int _oldId;
         private IDoor _door;
 
+        // tilføjet
+        private IDisplay _display;
+        private IRfidReader _rfidReader;
+        private ILogFile _logFile;
+
         private string logFile = "logfile.txt"; // Navnet på systemets log-fil
 
         // Her mangler constructor
