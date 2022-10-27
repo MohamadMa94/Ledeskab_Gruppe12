@@ -8,14 +8,14 @@ namespace Ladeskab.Interfaces
 {
     public interface IDisplay
     {
-        void ConnectPhone();
-        void Erorr_ConnectPhone();
-        void ReadRfid();
-        void Erorr_ReadRfid();
-        void PhoneCharging();
-        void Erorr_PhoneCharging();
+        public void ConnectPhone();
+        public void Erorr_ConnectPhone();
+        public void ReadRfid();
+        public void Erorr_ReadRfid();
+        public void PhoneCharging();
+        public void Erorr_PhoneCharging();
 
-        void PhoneChargeDone();
+        public void PhoneChargeDone();
 
 
     }

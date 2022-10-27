@@ -9,37 +9,37 @@ namespace Ladeskab
 {
     public class Display : IDisplay
     {
-        void IDisplay.ConnectPhone()
+        public void ConnectPhone()
         {
             Console.WriteLine("Please connect your phone to the charging .\n");
         }
 
-        void IDisplay.Erorr_ConnectPhone()
+        public void Erorr_ConnectPhone()
         {
             Console.WriteLine("ERROR! The phone is not connected.\n");
         }
 
-        void IDisplay.Erorr_PhoneCharging()
+        public void Erorr_PhoneCharging()
         {
             Console.WriteLine("ERROR! Phone is not charging.\n");
         }
 
-        void IDisplay.Erorr_ReadRfid()
+        public void Erorr_ReadRfid()
         {
             Console.WriteLine("ERROR! RFID chip is not on the lock.\n");
         }
 
-        void IDisplay.PhoneChargeDone()
+        public void PhoneChargeDone()
         {
             Console.WriteLine("Phone is fully charged\n");
         }
 
-        void IDisplay.PhoneCharging()
+        public void PhoneCharging()
         {
             Console.WriteLine("Phone is currently charging.\n");
         }
 
-        void IDisplay.ReadRfid()
+        public void ReadRfid()
         {
             Console.WriteLine("Place RFID chip on the lock.\n");
         }

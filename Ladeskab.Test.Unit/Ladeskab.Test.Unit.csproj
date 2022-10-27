@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AppLadeskab\AppLadeskab.csproj" />
     <ProjectReference Include="..\Ladeskab\Ladeskab.csproj" />
   </ItemGroup>
 

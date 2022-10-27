@@ -15,13 +15,13 @@ namespace Ladeskab
         {
             DoorEvent?.Invoke(this, e);
         }
-        void IDoor.DoorClosed()
+        public void DoorClosed()
         {
             DoorChanged(new DoorEventArgs { IsOpen = false });
 
         }
 
-        void IDoor.DoorOpened()
+        public void DoorOpened()
         {
             if (!IsLocked)
             {
@@ -29,12 +29,12 @@ namespace Ladeskab
             }
         }
 
-        void IDoor.LockDoor()
+        public void LockDoor()
         {
             IsLocked = true;
         }
 
-        void IDoor.UnlockDoor()
+        public void UnlockDoor()
         {
             IsLocked = false;
         }

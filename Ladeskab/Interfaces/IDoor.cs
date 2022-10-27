@@ -15,12 +15,12 @@ namespace Ladeskab.Interfaces
     public interface IDoor
     {
 
-        void LockDoor();
-        void UnlockDoor();
+        public void LockDoor();
+        public void UnlockDoor();
 
-        void DoorOpened();
+        public void DoorOpened();
 
-        void DoorClosed();
+        public void DoorClosed();
 
     }
 }
