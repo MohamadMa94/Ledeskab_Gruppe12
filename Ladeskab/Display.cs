@@ -9,6 +9,7 @@ namespace Ladeskab
 {
     public class Display : IDisplay
     {
+
         void IDisplay.ConnectPhone()
         {
             Console.WriteLine("Please connect your phone to the charging .\n");
@@ -16,7 +17,7 @@ namespace Ladeskab
 
         void IDisplay.Erorr_ConnectPhone()
         {
-           Console.WriteLine("ERROR! The phone is not connected.\n");
+            Console.WriteLine("ERROR! The phone is not connected.\n");
         }
 
         void IDisplay.Erorr_PhoneCharging()
@@ -38,5 +39,6 @@ namespace Ladeskab
         {
             Console.WriteLine("Place RFID chip on the lock.\n");
         }
+
     }
 }
