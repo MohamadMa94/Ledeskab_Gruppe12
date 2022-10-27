@@ -15,5 +15,8 @@ namespace Ladeskab.Interfaces
         void PhoneCharging();
         void Erorr_PhoneCharging();
 
+        void PhoneChargeDone();
+
+
     }
 }
