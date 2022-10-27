@@ -13,6 +13,7 @@ namespace Ladeskab.Test.Unit
     {
         private Door _uut;
         private DoorEventArgs _receivedEventArgs;
+        private Door _Door;
 
 
         [SetUp]
@@ -26,6 +27,7 @@ namespace Ladeskab.Test.Unit
               {
                   _receivedEventArgs = args;
               };
+            _Door = Substitute.For<Door>();
         }
 
 
