@@ -14,7 +14,7 @@ namespace Ladeskab
         IDisplay _display;
 
         public double _Current {get; private set; }
-        public bool _charging { get; private set; }
+        public bool _charging { get; set; }
 
         public ChargeControl()
         {
@@ -61,16 +61,16 @@ namespace Ladeskab
             }
 
             // Opladning slut
-            else if (_Current == 5 && _Current > 0)
+            else if (_Current <= 5 && _Current > 0)
             {
-                // Vis på display at opladning er slut
+                _display.PhoneChargeDone();
                 _charging = false;
             }
 
             //Opladningen er igang
             else if (_Current <= 500 && _Current > 5 )
             {
-                // Hvis på display at telefonen stadig lader
+                _display.PhoneCharging();
                 _charging = true;
             }
 
@@ -78,6 +78,7 @@ namespace Ladeskab
             else
             {
                 // vis på display at bruger skal unplugge telefon
+
                 StopCharge();
             }
         }
