@@ -36,7 +36,7 @@ namespace Ladeskab
 
         public void PhoneCharging()
         {
-            Console.WriteLine("Phone is currently charging.\n");
+            Console.WriteLine("Phone is  charging.\n");
         }
 
         public void ReadRfid()
