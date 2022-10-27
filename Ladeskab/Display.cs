@@ -30,6 +30,11 @@ namespace Ladeskab
             Console.WriteLine("ERROR! RFID chip is not on the lock.\n");
         }
 
+        void IDisplay.PhoneChargeDone()
+        {
+            Console.WriteLine("Phone is fully charged\n");
+        }
+
         void IDisplay.PhoneCharging()
         {
             Console.WriteLine("Phone is currently charging.\n");
