@@ -38,11 +38,14 @@ namespace Ladeskab
             _charger = new ChargeControl();
             _state = LadeskabState.Available;
             _display = new Display();
+
             
-            // Følgende constructore skal laves
-            //_door = new Door()
-            //_rfidReader = new RfidReader();
-            //_logFile = new LogFile();
+            _door = new Door();
+            _rfidReader = new RfidReader();
+            //_logFile = new LogFile(); // mangler endnu
+
+            _rfidReader.RfidTagRead += HandleEventRfid;
+            
         }
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
@@ -97,6 +100,11 @@ namespace Ladeskab
 
                     break;
             }
+        }
+
+        private void HandleEventRfid (object sender, RfidEventArgs ea)
+        {
+            RfidDetected(ea.IdTag);
         }
 
         // Her mangler de andre trigger handlere

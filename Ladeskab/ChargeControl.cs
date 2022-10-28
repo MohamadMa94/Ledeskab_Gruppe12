@@ -77,8 +77,7 @@ namespace Ladeskab
             // Der er en fejl
             else
             {
-                // vis på display at bruger skal unplugge telefon
-
+                _display.PhoneChargeDone();
                 StopCharge();
             }
         }

@@ -5,13 +5,15 @@ using System;
 
 
 
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
         // Assemble your system here from all the classes
         IWrite write = new Write();
         ILogFile log = new LogFile(write);
+        IDoor door = new Door();
+        
 
             bool finish = false;
             do
@@ -28,11 +30,11 @@ using System;
                         break;
 
                     case 'O':
-                        door.OnDoorOpen();
+                        door.DoorOpened();
                         break;
 
                     case 'C':
-                        door.OnDoorClose();
+                        door.DoorClosed();
                         break;
 
                     case 'R':
@@ -40,7 +42,7 @@ using System;
                         string idString = System.Console.ReadLine();
 
                         int id = Convert.ToInt32(idString);
-                        rfidReader.OnRfidRead(id);
+                        //rfidReader.OnRfidRead(id);
                         break;
 
                     default:
