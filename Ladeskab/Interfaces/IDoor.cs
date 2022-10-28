@@ -14,6 +14,7 @@ namespace Ladeskab.Interfaces
     }
     public interface IDoor
     {
+        public event EventHandler<DoorEventArgs> DoorEvent;
 
         public void LockDoor();
         public void UnlockDoor();

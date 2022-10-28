@@ -102,11 +102,25 @@ namespace Ladeskab
             }
         }
 
+        private void HandleDoorEvent(object sender, DoorEventArgs de)
+        {
+            if (de.IsOpen == true)
+            {
+                _state = LadeskabState.DoorOpen;
+                _display.ConnectPhone();
+            }
+            if (de.IsOpen == false)
+            {
+                _state = LadeskabState.Available;
+                _display.ReadRfid();
+            }
+        }
+
         private void HandleEventRfid (object sender, RfidEventArgs ea)
         {
             RfidDetected(ea.IdTag);
         }
 
-        // Her mangler de andre trigger handlere
+        
     }
 }
