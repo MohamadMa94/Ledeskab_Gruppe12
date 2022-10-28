@@ -10,11 +10,11 @@ namespace Ladeskab
     public class RfidReader : IRfidReader
     {
 
-        public event EventHandler<RfidEventArgs> RfidTagRead;
+        public event EventHandler<RfidEventArgs> RfidReaderEvent;
 
         public void RfidRead(int Id)
         {
-            RfidTagRead?.Invoke(this, new RfidEventArgs() { IdTag = Id });
+            RfidReaderEvent?.Invoke(this, new RfidEventArgs() { IdTag = Id });
         }
         
     }

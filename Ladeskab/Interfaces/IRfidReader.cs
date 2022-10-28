@@ -15,7 +15,7 @@ namespace Ladeskab.Interfaces
 
     public interface IRfidReader
     {
-        public event EventHandler<RfidEventArgs> RfidTagRead;
+        public event EventHandler<RfidEventArgs> RfidReaderEvent;
         
 
         void RfidRead(int Id);
