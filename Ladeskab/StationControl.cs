@@ -44,7 +44,7 @@ namespace Ladeskab
             _rfidReader = new RfidReader();
             //_logFile = new LogFile(); // mangler endnu
 
-            _rfidReader.RfidTagRead += HandleEventRfid;
+            _rfidReader.RfidReaderEvent += HandleEventRfid;
             
         }
 

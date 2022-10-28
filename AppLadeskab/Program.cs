@@ -3,17 +3,18 @@ using Ladeskab.Interfaces;
 using System;
 
 
-
-
-    public class Program
+namespace AppLadeskab
+{ 
+     class Program
     {
         static void Main(string[] args)
         {
-        // Assemble your system here from all the classes
-        IWrite write = new Write();
-        ILogFile log = new LogFile(write);
-        IDoor door = new Door();
-        
+            // Assemble your system here from all the classes
+            IWrite write = new Write();
+            ILogFile log = new LogFile(write);
+            IDoor door = new Door();
+            IRfidReader rfidReader = new RfidReader();
+            ILogFile logfile = new LogFile(write);
 
             bool finish = false;
             do
@@ -42,7 +43,8 @@ using System;
                         string idString = System.Console.ReadLine();
 
                         int id = Convert.ToInt32(idString);
-                        //rfidReader.OnRfidRead(id);
+                        rfidReader.RfidRead(id);
+
                         break;
 
                     default:
@@ -53,3 +55,4 @@ using System;
         }
     }
 
+}
