@@ -10,7 +10,7 @@ namespace Ladeskab
 {
     public class LogFile : ILogFile
     {
-        private string _logFile = "logfile.txt"; // Navnet på systemets log-fil
+        private string _logFile = "logfile.txt"; 
         private IWrite _write;
 
         public LogFile(IWrite write)
