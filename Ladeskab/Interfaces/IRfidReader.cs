@@ -18,7 +18,7 @@ namespace Ladeskab.Interfaces
         public event EventHandler<RfidEventArgs> RfidTagRead;
         
 
-        void RfidRead(UInt32 Id);
+        void RfidRead(int Id);
 
     }
 }

@@ -12,7 +12,7 @@ namespace Ladeskab
 
         public event EventHandler<RfidEventArgs> RfidTagRead;
 
-        public void RfidRead(UInt32 Id)
+        public void RfidRead(int Id)
         {
             RfidTagRead?.Invoke(this, new RfidEventArgs() { IdTag = Id });
         }
