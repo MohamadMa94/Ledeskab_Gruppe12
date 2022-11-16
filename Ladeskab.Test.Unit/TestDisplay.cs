@@ -55,6 +55,13 @@ namespace Ladeskab.Test.Unit
         }
 
         [Test]
+        public void Erorr_Phone_Not_Charging()
+        {
+            _display.Erorr_PhoneCharging();
+            _display.Received(1).Erorr_PhoneCharging();
+        }
+
+        [Test]
         public void PhoneCharge_Is_Full()
         {
             _display.PhoneChargeDone();
