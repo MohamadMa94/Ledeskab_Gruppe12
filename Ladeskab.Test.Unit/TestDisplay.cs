@@ -12,12 +12,12 @@ namespace Ladeskab.Test.Unit
     [TestFixture]
     public class TestDisplay
     {
-        private IDisplay _display;
+        private Display _display;
 
         [SetUp]
         public void Setup()
         {
-            _display = Substitute.For<IDisplay>();
+            _display = Substitute.For<Display>();
         }
         
         [Test]
