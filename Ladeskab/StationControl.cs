@@ -33,20 +33,18 @@ namespace Ladeskab
 
         // Her mangler constructor
         // Constructor
-        public StationControl()
+        public StationControl(IDoor door, IChargeControl charger, IRfidReader rfidReader, IDisplay display, ILogFile logFile)
         {
-            _charger = new ChargeControl();
+            _door = door;
+            _charger = charger;
+            _rfidReader = rfidReader;
+            _display = display;
+            _logFile = logFile;
             _state = LadeskabState.Available;
-            _display = new Display();
-
-            
-            _door = new Door();
-            _rfidReader = new RfidReader();
-            //_logFile = new LogFile(); // mangler endnu
-
-            _rfidReader.RfidReaderEvent += HandleEventRfid;
-            
+            _door.DoorEvent+= HandleDoorEvent;
+            _rfidReader.RfidReaderEvent+= HandleEventRfid;
         }
+    
 
         // Eksempel på event handler for eventet "RFID Detected" fra tilstandsdiagrammet for klassen
         private void RfidDetected(int id)
