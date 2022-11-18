@@ -96,6 +96,14 @@ namespace Ladeskab.Test.Unit
             
             Assert.That(_uut._charging, Is.True);
         }
-        
+        [TestCase(500.1)]
+        [TestCase(double.MaxValue)]
+        [Test]
+        public void NewCurrentDetected_Current_GreaterThan500(double test_current)
+        {
+            _usbCharger.CurrentValueEvent += Raise.EventWith(new CurrentEventArgs { Current = test_current });
+            _display.Received().PhoneChargeDone();
+            _usbCharger.Received().StopCharge();
+        }
     }
 }
