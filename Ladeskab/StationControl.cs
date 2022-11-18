@@ -73,10 +73,6 @@ namespace Ladeskab
 
                     break;
 
-                case LadeskabState.DoorOpen:
-                    // Ignore
-                    break;
-
                 case LadeskabState.Locked:
                     // Check for correct ID
                     if (id == _oldId)
