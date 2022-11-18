@@ -31,9 +31,10 @@ namespace Ladeskab
             _USBCharger.CurrentValueEvent += HandleCurrentValueChanged;
         }
 
-        public bool Connected
+        public bool Connected()
         {
-            get { return _USBCharger.Connected; } private set { }
+            return _USBCharger.Connected;
+
         }
 
         public void StartCharge()
