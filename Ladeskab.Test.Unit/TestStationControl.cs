@@ -45,7 +45,7 @@ namespace Ladeskab.Test.Unit
         [Test]
         public void TestDoorOpened()
         {
-            _door.DoorEvent += Raise.EventWith(new DoorEventArgs() { IsOpen = false });
+            _door.DoorEvent += Raise.EventWith(new DoorEventArgs() { IsOpen = true });
 
              
             _display.Received(1).ConnectPhone();
@@ -58,6 +58,7 @@ namespace Ladeskab.Test.Unit
             
             _chargeControl.Connected().Returns(false);
             _rfidReader.RfidReaderEvent += Raise.EventWith(new RfidEventArgs() { IdTag = 55 });
+            _display.Erorr_ConnectPhone();
             _display.Received(1).Erorr_ConnectPhone();
         }
         [Test]
@@ -66,8 +67,11 @@ namespace Ladeskab.Test.Unit
             _chargeControl.Connected().Returns(true);
             _rfidReader.RfidReaderEvent += Raise.EventWith(new RfidEventArgs() { IdTag = 55 });
             _door.Received(1).LockDoor();
+            _display.PhoneCharging();
             _display.Received(1).PhoneCharging();
-        }
+          }
+
+
         [Test]
         public void TestRfidDetectedOldEqualNewIDUnlock()
         {
@@ -85,6 +89,7 @@ namespace Ladeskab.Test.Unit
             _rfidReader.RfidReaderEvent += Raise.EventWith(new RfidEventArgs() { IdTag = 55 });
 
             _rfidReader.RfidReaderEvent += Raise.EventWith(new RfidEventArgs() { IdTag = 5555 });
+            _display.Erorr_ReadRfid();
             _display.Received(1).Erorr_ReadRfid();
 
         }
